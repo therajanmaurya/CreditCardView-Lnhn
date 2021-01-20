@@ -3,7 +3,7 @@ package xyz.belvi.addcard;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 
 import xyz.belvi.luhn.Luhn;

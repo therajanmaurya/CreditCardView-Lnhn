@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="LuhnAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="LuhnAppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/ln_colorPrimary</item>
         <item name="colorPrimaryDark">@color/ln_colorPrimaryDark</item>

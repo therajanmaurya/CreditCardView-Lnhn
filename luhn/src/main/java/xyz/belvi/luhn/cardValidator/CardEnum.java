@@ -1,6 +1,6 @@
 package xyz.belvi.luhn.cardValidator;
 
-import android.support.annotation.DrawableRes;
+import androidx.annotation.DrawableRes;
 
 import xyz.belvi.luhn.R;
 

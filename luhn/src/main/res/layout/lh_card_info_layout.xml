@@ -14,7 +14,7 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/info_header"
             fontPath="fonts/ClanProOriginalNews.otf"
             android:layout_width="match_parent"
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/info_desc"
                 fontPath="fonts/ClanProBook.ttf"
                 android:layout_width="wrap_content"
@@ -38,7 +38,7 @@
                 android:textColor="@color/ln_colorInfoDesc"
                 android:textSize="14sp" />
 
-            <android.support.v7.widget.AppCompatImageView
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/info_img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
 
         </LinearLayout>
 
-        <android.support.v7.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/ok_dimiss"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

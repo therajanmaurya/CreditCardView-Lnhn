@@ -1,8 +1,8 @@
 package xyz.belvi.luhn;
 
 import android.graphics.Rect;
-import android.support.annotation.IdRes;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.IdRes;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 

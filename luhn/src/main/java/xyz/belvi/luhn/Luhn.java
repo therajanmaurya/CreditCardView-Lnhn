@@ -5,17 +5,6 @@ import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.Nullable;
-import android.support.annotation.StringRes;
-import android.support.annotation.StyleRes;
-import android.support.design.widget.BottomSheetBehavior;
-import android.support.design.widget.TextInputLayout;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.AppCompatButton;
-import android.support.v7.widget.AppCompatImageView;
-import android.support.v7.widget.AppCompatTextView;
-import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,6 +12,20 @@ import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import androidx.annotation.DrawableRes;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+import androidx.annotation.StyleRes;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.appcompat.widget.LinearLayoutCompat;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.Arrays;
 
@@ -252,7 +255,7 @@ public final class Luhn extends BaseActivity implements LuhnCardVerifier {
 
 
     private void initCardField() {
-        cardNumber = (CardTextInputLayout) findViewById(R.id.cti_card_number_input);
+        cardNumber = findViewById(R.id.cti_card_number_input);
         cardNumber.post(new Runnable() {
             @Override
             public void run() {
@@ -485,7 +488,7 @@ public final class Luhn extends BaseActivity implements LuhnCardVerifier {
 
 
     private void setButtonMargin(View view, int left, int top, int right, int bottom) {
-        android.support.v7.widget.LinearLayoutCompat.LayoutParams params = (android.support.v7.widget.LinearLayoutCompat.LayoutParams) view.getLayoutParams();
+        LinearLayoutCompat.LayoutParams params = (LinearLayoutCompat.LayoutParams) view.getLayoutParams();
         params.setMargins(left, top, right, bottom); //left, top, right, bottom
         view.setLayoutParams(params);
     }

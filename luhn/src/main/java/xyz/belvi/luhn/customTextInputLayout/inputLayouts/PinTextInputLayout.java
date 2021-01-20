@@ -3,8 +3,8 @@ package xyz.belvi.luhn.customTextInputLayout.inputLayouts;
 import android.content.Context;
 import android.graphics.Rect;
 import android.graphics.Typeface;
-import android.support.design.widget.CheckableImageButton;
-import android.support.design.widget.TextInputLayout;
+import com.google.android.material.internal.CheckableImageButton;
+import com.google.android.material.textfield.TextInputLayout;
 import android.text.InputType;
 import android.text.method.PasswordTransformationMethod;
 import android.util.AttributeSet;
@@ -51,7 +51,7 @@ public class PinTextInputLayout extends TextInputLayout {
                 updatePasswordToggleView();
 
 
-                Field mPasswordToggleViewField = TextInputLayout.class.getDeclaredField("mPasswordToggleView");
+                Field mPasswordToggleViewField = TextInputLayout.class.getDeclaredField("passwordToggleView");
                 mPasswordToggleViewField.setAccessible(true);
                 Object o = mPasswordToggleViewField.get(this);
                 mPasswordToggleView = ((CheckableImageButton) o);
@@ -73,12 +73,12 @@ public class PinTextInputLayout extends TextInputLayout {
 
     private void init() {
         try {
-            Field cthField = TextInputLayout.class.getDeclaredField("mCollapsingTextHelper");
+            Field cthField = TextInputLayout.class.getDeclaredField("collapsingTextHelper");
             cthField.setAccessible(true);
             collapsingTextHelper = cthField.get(this);
 
 
-            Field boundsField = collapsingTextHelper.getClass().getDeclaredField("mCollapsedBounds");
+            Field boundsField = collapsingTextHelper.getClass().getDeclaredField("collapsedBounds");
             boundsField.setAccessible(true);
             bounds = (Rect) boundsField.get(collapsingTextHelper);
 
@@ -124,11 +124,11 @@ public class PinTextInputLayout extends TextInputLayout {
 
         if (!getEditText().getText().toString().isEmpty()) {
             getEditText().setTransformationMethod(PasswordTransformationMethod.getInstance());
-            toggleEnabled("mPasswordToggledVisible", false);
+            toggleEnabled("passwordToggledVisible", false);
             mPasswordToggleView.setChecked(false);
         } else {
             getEditText().setTransformationMethod(null);
-            toggleEnabled("mPasswordToggledVisible", true);
+            toggleEnabled("passwordToggledVisible", true);
             mPasswordToggleView.setChecked(true);
         }
         // And restore the cursor position
